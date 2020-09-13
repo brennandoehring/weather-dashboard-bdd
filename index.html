@@ -37,7 +37,7 @@
     <div class = "citySearch">
         <label for = "cityName">Search for a City:</label>
         <input id = "cityName">
-        <button type = "submit"><i class = "fa fa-search"></i></button>
+        <button type = "submit" id = "citySubmit"><i class = "fa fa-search"></i></button>
     </div>
 
     <!-- History list -->
@@ -61,7 +61,60 @@
     <!-- Five day forecast -->
     <container class = "forecast">
         <div class = "fiveDays">
-            <!-- Five Day forecast cards go here -->
+        
+            <!-- Day one -->
+        <div class = "card text-white bg-primary mb-3" style = "max-width: 18rem;">
+            <div class = "card-header" id = "oneDate"></div>
+                <div class = "card-body">
+                <h5 class = "card-title" id = "oneIcon"></h5>
+                <p class = "card-text" id = "oneTemp"></p>
+                <p class = "card-text" id = "oneHumidity"></p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Day two -->
+        <div class = "card text-white bg-primary mb-3" style = "max-width: 18rem;">
+            <div class = "card-header" id = "twoDate">Date</div>
+                <div class = "card-body">
+                <h5 class = "card-title" id = "twoIcon">Sun.jpg</h5>
+                <p class = "card-text" id = "twoTemp">Temp</p>
+                <p class = "card-text" id = "twoHumidity">Humid</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Day three -->
+        <div class = "card text-white bg-primary mb-3" style = "max-width: 18rem;">
+            <div class = "card-header" id = "threeDate">Date</div>
+                <div class = "card-body">
+                <h5 class = "card-title" id = "threeIcon"></h5>
+                <p class = "card-text" id = "threeTemp">Temp</p>
+                <p class = "card-text" id = "threeHumidity">Humid</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Day four -->
+        <div class = "card text-white bg-primary mb-3" style = "max-width: 18rem;">
+            <div class = "card-header" id = "fourDate">Date</div>
+                <div class = "card-body">
+                <h5 class = "card-title" id = "fourIcon">Sun.jpg</h5>
+                <p class = "card-text" id = "fourTemp">Temp</p>
+                <p class = "card-text" id = "fourHumidity">Humid</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Day five -->
+        <div class = "card text-white bg-primary mb-3" style = "max-width: 18rem;">
+            <div class = "card-header" id = "fiveDate">Date</div>
+                <div class = "card-body">
+                <h5 class = "card-title" id = "fiveIcon">Sun.jpg</h5>
+                <p class = "card-text" id = "fiveTemp">Temp</p>
+                <p class = "card-text" id = "fiveHumidity">Humid</p>
+                </div>
+            </div>
         </div>
     </container>
 
