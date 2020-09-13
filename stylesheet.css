@@ -4,3 +4,15 @@
     color: white;
     padding: 5px;
 }
+
+.citySearch {
+    padding-left: 15px;
+}
+input, label {
+    display: block;
+}
+
+label {
+    font-weight: bold;
+}
+

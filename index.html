@@ -16,18 +16,54 @@
       integrity = "sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
       crossorigin = "anonymous"
     />
+    <link 
+    rel = "stylesheet" 
+    href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link
-      href = "https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
-      rel = "stylesheet"
+    href = "https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+    rel = "stylesheet"
     />
     <link rel = "stylesheet" href = "stylesheet.css" />
     <title>Weather Dashboard</title>
 </head>
 
 <body>
+    <!-- Header -->
     <header class = "header">
         <h1>Weather Dashboard</h1>
     </header>
+
+    <!-- City search input -->
+    <div class = "citySearch">
+        <label for = "cityName">Search for a City:</label>
+        <input id = "cityName">
+        <button type = "submit"><i class = "fa fa-search"></i></button>
+    </div>
+
+    <!-- History list -->
+    <container class = "history">
+        <ul class = "list-group" id = "historyList">
+            <!-- The history of city searches will display here -->
+        </ul>
+    </container>
+
+    <!-- Details of the city -->
+    <container class = "city">
+        <div class = "citySheet">
+            <h2 id = "cityName"></h2>
+            <p id = "temperature"></p>
+            <p id = "humidity"></p>
+            <p id = "windSpeed"></p>
+            <p id = "uvIndex"></p>
+        </div>
+    </container>
+
+    <!-- Five day forecast -->
+    <container class = "forecast">
+        <div class = "fiveDays">
+            <!-- Five Day forecast cards go here -->
+        </div>
+    </container>
 
     <!-- JavaScript and jQuery calls -->
     <script src = "https://code.jquery.com/jquery-3.4.1.min.js"></script>
