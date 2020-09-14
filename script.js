@@ -56,23 +56,68 @@ $("#citySubmit").on("click", function() {
         $("#temperature").text("Temperature: " + temperatureDay);
         $("#humidity").text("Humidity: " + humidityDay);
         $("#windSpeed").text("Wind Speed: " + windSpeedDay);
+        console.log("Current Day displayed.");
 
         // FORECAST BEGINS HERE
-        // DAY ONE
-        // var cityNameDay = response.city.name;
-        // var temperatureDay = k2f(response.list[1].main.temp);
-        // var humidityDay = response.list[1].main.humidity + "%";
-        // var windSpeedDay = response.list[1].wind.speed + "MPH";
-        // var iconDay = response.list[1].weather[1].icon;
-        // var latitude = response.city.coord.lat;
-        // var longitude = response.city.coord.lon;
+        // Day one
+        var temperatureDay1 = k2f(response.list[1].main.temp);
+        var humidityDay1 = response.list[1].main.humidity + "%";
+        var iconDay1 = response.list[1].weather[0].icon;
+        const dateDay1 = moment().add(1, 'days').format("MM/DD/YYYY");
 
-        // const currentDate = new Date(response.list[0].dt * 1000);
-        // const day = currentDate.getDate();
-        // const month = currentDate.getMonth() + 1;
-        // const year = currentDate.getFullYear();
-        // console.log(currentDate);
+        $("#oneDate").text(dateDay1);
+        $("#oneIcon").attr("src" , "https://openweathermap.org/img/wn/" + iconDay1 + "@2x.png");
+        $("#oneTemp").text("Temperature: " + temperatureDay1);
+        $("#oneHumidity").text("Humidity: " + humidityDay1);
+        console.log("Day One displayed.");
 
+        // Day two
+        var temperatureDay2 = k2f(response.list[2].main.temp);
+        var humidityDay2 = response.list[2].main.humidity + "%";
+        var iconDay2 = response.list[2].weather[0].icon;
+        const dateDay2 = moment().add(2, 'days').format("MM/DD/YYYY");
+
+        $("#twoDate").text(dateDay2);
+        $("#twoIcon").attr("src" , "https://openweathermap.org/img/wn/" + iconDay2 + "@2x.png");
+        $("#twoTemp").text("Temperature: " + temperatureDay2);
+        $("#twoHumidity").text("Humidity: " + humidityDay2);
+        console.log("Day Two displayed.");
+
+        // Day three
+        var temperatureDay3 = k2f(response.list[3].main.temp);
+        var humidityDay3 = response.list[3].main.humidity + "%";
+        var iconDay3 = response.list[3].weather[0].icon;
+        const dateDay3 = moment().add(3, 'days').format("MM/DD/YYYY");
+
+        $("#threeDate").text(dateDay3);
+        $("#threeIcon").attr("src" , "https://openweathermap.org/img/wn/" + iconDay3 + "@2x.png");
+        $("#threeTemp").text("Temperature: " + temperatureDay3);
+        $("#threeHumidity").text("Humidity: " + humidityDay3);
+        console.log("Day Three displayed.");
+
+        // Day four
+        var temperatureDay4 = k2f(response.list[4].main.temp);
+        var humidityDay4 = response.list[4].main.humidity + "%";
+        var iconDay4 = response.list[4].weather[0].icon;
+        const dateDay4 = moment().add(4, 'days').format("MM/DD/YYYY");
+
+        $("#fourDate").text(dateDay4);
+        $("#fourIcon").attr("src" , "https://openweathermap.org/img/wn/" + iconDay4 + "@2x.png");
+        $("#fourTemp").text("Temperature: " + temperatureDay4);
+        $("#fourHumidity").text("Humidity: " + humidityDay4);
+        console.log("Day Four displayed.");
+
+        // Day five
+        var temperatureDay5 = k2f(response.list[5].main.temp);
+        var humidityDay5 = response.list[5].main.humidity + "%";
+        var iconDay5 = response.list[5].weather[0].icon;
+        const dateDay5 = moment().add(5, 'days').format("MM/DD/YYYY");
+
+        $("#fiveDate").text(dateDay5);
+        $("#fiveIcon").attr("src" , "https://openweathermap.org/img/wn/" + iconDay5 + "@2x.png");
+        $("#fiveTemp").text("Temperature: " + temperatureDay5);
+        $("#fiveHumidity").text("Humidity: " + humidityDay5);
+        console.log("Day Five displayed.");
 })
 
 // Kelvin to fahrenheit conversion
