@@ -33,96 +33,101 @@
         <h1>Weather Dashboard</h1>
     </header>
 
-    <!-- City search input -->
-    <div class = "citySearch">
-        <label for = "cityInp">Search for a City:</label>
-        <input id = "cityInp">
-        <button type = "submit" id = "citySubmit"><i class = "fa fa-search"></i></button>
-    </div>
+    <!-- Allows content to responsively display -->
+    <container class = "container">
+    
+        <!-- Creates a row -->
+        <div class = "row">
 
-    <!-- History list -->
-    <container class = "history">
-        <ul class = "list-group" id = "historyList">
-            <!-- The history of city searches will display here -->
-        </ul>
-    </container>
+            <!-- Creates a column to hold the search bar and history list -->
+            <div class = "col-sm-3">
 
-    <!-- Details of the city -->
-    <container class = "city">
-        <div class = "citySheet">
-            <h2 id = "cityName">City</h2> 
-            <img id="icon" src="" alt="Weather icon" />
-            <p id = "temperature">Temperature:</p>
-            <p id = "humidity">Humidity:</p>
-            <p id = "windSpeed">Wind Speed:</p>
-            <p id = "uvIndex">UV Index:</p>
-        </div>
-    </container>
+                <!-- City search input -->
+                <div class = "citySearch">
+                    <label for = "cityInp">Search for a City:</label>
+                    <input id = "cityInp">
+                    <button class = "submitBtn" type = "submit" id = "citySubmit"><i class = "fa fa-search"></i></button>
+                </div>
+                
+                <!-- History list -->
+                <div class = "historyList">
+                    <ul class = "list-history"></ul>
+                </div>
+            </div>
 
-    <!-- Five day forecast -->
-    <container class = "forecast">
-        <div class = "fiveDays">
-            <h1>Five Day Forecast</h1>
-        
-            <!-- Day one -->
-        <div class = "card text-white bg-primary mb-3" style = "max-width: 18rem;">
-            <div class = "card-header" id = "oneDate"></div>
-                <div class = "card-body">
-                <h5 class = "card-title" id = "oneDate"></h5>
-                <img id="oneIcon" src="" alt="Weather icon" />
-                <p class = "card-text" id = "oneTemp"></p>
-                <p class = "card-text" id = "oneHumidity"></p>
+            <!-- Creates a column to hold the current city and 5-day forecast -->
+            <div class = "col-sm-9">
+
+                <!-- Details of the city -->
+                <div class = "citySheet">
+                    <h2 id = "cityName">City</h2> 
+                    <img id = "icon" src = "" alt= "Weather icon" />
+                    <p id = "temperature">Temperature:</p>
+                    <p id = "humidity">Humidity:</p>
+                    <p id = "windSpeed">Wind Speed:</p>
+                    <p id = "uvIndex">UV Index:</p>
                 </div>
-            </div>
-        </div>
-        
-        <!-- Day two -->
-        <div class = "card text-white bg-primary mb-3" style = "max-width: 18rem;">
-            <div class = "card-header" id = "twoDate"></div>
-                <div class = "card-body">
-                <h5 class = "card-title" id = "twoDate"></h5>
-                <img id="twoIcon" src="" alt="Weather icon" />
-                <p class = "card-text" id = "twoTemp"></p>
-                <p class = "card-text" id = "twoHumidity"></p>
+
+                <!-- Five day forecast heading -->
+                <div class = "fiveDays">
+                    <h1>Five Day Forecast</h1>
                 </div>
-            </div>
-        </div>
-        
-        <!-- Day three -->
-        <div class = "card text-white bg-primary mb-3" style = "max-width: 18rem;">
-            <div class = "card-header" id = "threeDate"></div>
-                <div class = "card-body">
-                <h5 class = "card-title" id = "threeDate"></h5>
-                <img id="threeIcon" src="" alt="Weather icon" />
-                <p class = "card-text" id = "threeTemp"></p>
-                <p class = "card-text" id = "threeHumidity"></p>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Day four -->
-        <div class = "card text-white bg-primary mb-3" style = "max-width: 18rem;">
-            <div class = "card-header" id = "fourDate"></div>
-                <div class = "card-body">
-                <h5 class = "card-title" id = "fourDate"></h5>
-                <img id="fourIcon" src="" alt="Weather icon" />
-                <p class = "card-text" id = "fourTemp"></p>
-                <p class = "card-text" id = "fourHumidity"></p>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Day five -->
-        <div class = "card text-white bg-primary mb-3" style = "max-width: 18rem;">
-            <div class = "card-header" id = "fiveDate"></div>
-                <div class = "card-body">
-                <h5 class = "card-title" id = "fiveDate"></h5>
-                <img id="fiveIcon" src="" alt="Weather icon" />
-                <p class = "card-text" id = "fiveTemp"></p>
-                <p class = "card-text" id = "fiveHumidity"></p>
-                </div>
-            </div>
-        </div>
+
+                <!-- Creates a row for card deck -->
+                <div class = "row">
+                    
+                    <!-- Day one -->
+                    <div class = "card text-white bg-primary mb-3" style = "max-width: 10rem;">
+                        <div class = "card-header" id = "oneDate"></div>
+                            <div class = "card-body">
+                            <img id="oneIcon" src="" alt="Weather icon" />
+                            <p class = "card-text" id = "oneTemp"></p>
+                            <p class = "card-text" id = "oneHumidity"></p>
+                        </div>
+                    </div>
+                
+                    <!-- Day two -->
+                    <div class = "card text-white bg-primary mb-3" style = "max-width: 10rem;">
+                        <div class = "card-header" id = "twoDate"></div>
+                        <div class = "card-body">
+                            <img id="twoIcon" src="" alt="Weather icon" />
+                            <p class = "card-text" id = "twoTemp"></p>
+                            <p class = "card-text" id = "twoHumidity"></p>
+                        </div>
+                    </div>
+
+                    <!-- Day three -->
+                    <div class = "card text-white bg-primary mb-3" style = "max-width: 10rem;">
+                        <div class = "card-header" id = "threeDate"></div>
+                        <div class = "card-body">
+                            <img id="threeIcon" src="" alt="Weather icon" />
+                            <p class = "card-text" id = "threeTemp"></p>
+                            <p class = "card-text" id = "threeHumidity"></p>
+                        </div>
+                    </div>
+                    
+                    <!-- Day four -->
+                    <div class = "card text-white bg-primary mb-3" style = "max-width: 10rem;">
+                        <div class = "card-header" id = "fourDate"></div>
+                        <div class = "card-body">
+                            <img id="fourIcon" src="" alt="Weather icon" />
+                            <p class = "card-text" id = "fourTemp"></p>
+                            <p class = "card-text" id = "fourHumidity"></p>
+                        </div>
+                    </div>
+                    
+                    <!-- Day five -->
+                    <div class = "card text-white bg-primary mb-3" style = "max-width: 10rem;">
+                        <div class = "card-header" id = "fiveDate"></div>
+                        <div class = "card-body">
+                            <img id="fiveIcon" src="" alt="Weather icon" />
+                            <p class = "card-text" id = "fiveTemp"></p>
+                            <p class = "card-text" id = "fiveHumidity"></p>
+                        </div>    
+                    </div>    
+                </div>    
+            </div>    
+        </div>    
     </container>
 
     <!-- JavaScript and jQuery calls -->
@@ -130,5 +135,4 @@
     <script src = "https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src = "script.js"></script>
 </body>
-
 </html>

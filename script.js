@@ -2,6 +2,11 @@
 var searchTerms = JSON.parse(localStorage.getItem("City")) || [];
 let listDiv = $("#historyList");
 
+// Loads New York City forecast on page load
+function init() {
+    weatherGrabber("New York City");
+}
+
 // Kelvin to fahrenheit conversion
 function k2f(k) {
     return Math.floor((k - 273.15) * 1.8 + 32);
@@ -63,7 +68,7 @@ $.ajax({
     const currentDate = moment().format("MM/DD/YYYY");
     console.log("Today's date is: " + currentDate);
     
-    // Gets UV Index and displays
+    // Gets UV Index and displays with color based on level
     var uvQueryURL = "https://api.openweathermap.org/data/2.5/uvi/forecast?lat=" + latitude + "&lon=" + longitude
     + "&appid=61bd6110a742b7f64e0d6364d6a196d9" + "&cnt=1";
 
@@ -72,7 +77,17 @@ $.ajax({
         method: "GET"
     }).then(function(response) {
         var uvIndex = response[0].value;
-        $("#uvIndex").text("UV Index: " + uvIndex);
+        if (uvIndex < 3) {
+        $("#uvIndex").text("UV Index: " + uvIndex).css("color", "green");
+        } else if (uvIndex > 3 && uvIndex < 6) {
+            $("#uvIndex").text("UV Index: " + uvIndex).css("color", "yellow");
+        } else if (uvIndex > 6 && uvIndex < 8) {
+            $("#uvIndex").text("UV Index: " + uvIndex).css("color", "orange");
+        } else if (uvIndex > 8 && uvIndex < 10) {
+            $("#uvIndex").text("UV Index: " + uvIndex).css("color", "red");
+        } else {
+            $("#uvIndex").text("UV Index: " + uvIndex).css("color", "purple");
+        }
     });
 
     // Displays the remaining variables
@@ -143,4 +158,4 @@ $.ajax({
 // Search weather of history button clicked
 $(".list-history").on('click', "li", function(){
     weatherGrabber($(this).text());
-});
+}); init();

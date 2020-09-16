@@ -1,3 +1,7 @@
+body {
+    background-color: gray;
+}
+
 .header {
     text-align: center;
     background: #003333;
@@ -6,7 +10,9 @@
 }
 
 .citySearch {
+    position: relative;
     padding-left: 15px;
+    padding-bottom: 30px;
 }
 input, label {
     display: block;
@@ -16,3 +22,6 @@ label {
     font-weight: bold;
 }
 
+.submitBtn {
+    background-color: cyan;
+}
