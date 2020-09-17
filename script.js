@@ -39,7 +39,7 @@ $("#citySubmit").on("click", function() {
 
 // Grabs weather from the OpenWeatherMap API and 
 function weatherGrabber(city) {
-var queryURL = "http://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=61bd6110a742b7f64e0d6364d6a196d9";
+var queryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=61bd6110a742b7f64e0d6364d6a196d9";
 
 $.ajax({
     url: queryURL,
