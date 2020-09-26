@@ -5,4 +5,4 @@ This is a weather dashboard app that allows users to view what the current and f
 https://brennandoehring.github.io/weather-dashboard-bdd/
 
 # Webpage Screenshot: 
-<img src = "/weatherdashboard.jpg">
+<img src = "/assets/images/weatherdashboard.gif">
